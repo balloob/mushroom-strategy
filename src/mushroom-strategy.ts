@@ -25,6 +25,18 @@ import { NOTIFICATIONS } from './notifications';
 import MiscellaneousCard from './cards/MiscellaneousCard';
 import { localize } from './utilities/localize';
 
+declare global {
+  interface Window {
+    customStrategies?: Array<{
+      type: string;
+      strategyType: string;
+      name: string;
+      description: string;
+      documentationURL: string;
+    }>;
+  }
+}
+
 /**
  * Mushroom Dashboard Strategy.
  *
